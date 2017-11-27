@@ -13,6 +13,7 @@ import android.view.Window;
 import com.eeepay.cn.demo.tab.bean.CustomTabEntity;
 import com.eeepay.cn.demo.tab.bean.TabEntity;
 import com.eeepay.cn.demo.tab.listener.OnTabSelectListener;
+import com.eeepay.cn.demo.tab.utils.SoundPlayUtils;
 import com.eeepay.cn.demo.tab.utils.UnreadMsgUtils;
 import com.eeepay.cn.demo.tab.utils.ViewFindUtils;
 
@@ -45,6 +46,8 @@ public abstract class AbstractCommonTabLayout extends AppCompatActivity {
         initViews();
         initTabEntities();
         initData();
+        /** add by zhuangzeqin 2017年9月12日10:17:39 初始化默认的声音加载 **/
+        SoundPlayUtils.getInstance().initDefaultSoundPool(mContext);
     }
 
     /**
@@ -166,6 +169,7 @@ public abstract class AbstractCommonTabLayout extends AppCompatActivity {
     private OnTabSelectListener mOnTabSelectListener = new OnTabSelectListener() {
         @Override
         public void onTabSelect(int position) {
+            SoundPlayUtils.getInstance().play();//播放声音
             //选中
             mViewPager.setCurrentItem(position, false);
         }
@@ -173,6 +177,7 @@ public abstract class AbstractCommonTabLayout extends AppCompatActivity {
         @Override
         public void onTabReselect(int position) {
             //重复选中
+            SoundPlayUtils.getInstance().play();//播放声音
         }
     };
     /**
