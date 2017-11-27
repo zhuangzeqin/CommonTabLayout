@@ -2,6 +2,8 @@
 
 封装通用的TabLayout 框架（Viewpage+Fragment+CommonTabLayout）
 
+![image](https://github.com/zhuangzeqin/CommonTabLayout/blob/master/device-2017-11-27-155929.png)
+
 使用的时；特别方便；继承AbstractCommonTabLayout 实现以下几个参数即可
 
 1 显示的标题，
@@ -43,4 +45,8 @@ setUnReadMsg(1, 100);//第二个显示99+ 个未读消息
 setUnReadMsg(2, 5, Color.parseColor("#6D8FB0"));//第三个显示未读消息和设置背景颜色
 
 setDivisionLine(Color.parseColor("#6D8FB0"), 0.5F, 20);//设置分割线
+
+如果对你有用；不妨请小编我喝个咖啡；嘻嘻；你的动力；是我不懈努力
+
+![image](https://github.com/zhuangzeqin/APPChannel/blob/master/TIM20171109141728.png)
 
